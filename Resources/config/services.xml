@@ -7,10 +7,21 @@
 >
     <parameters>
         <parameter key="form.resolved_type_factory.class">Ivory\OrderedFormBundle\Form\OrderedResolvedFormTypeFactory</parameter>
-        <parameter key="ivory_ordered_form.form_extension.class">Ivory\OrderedFormBundle\Form\OrderedFormExtension</parameter>
+        <parameter key="ivory_ordered_form.form_extension.class">Ivory\OrderedFormBundle\Form\Extension\OrderedFormExtension</parameter>
+        <parameter key="ivory_ordered_form.form_orderer_factory.class">Ivory\OrderedFormBundle\Form\Orderer\FormOrdererFactory</parameter>
     </parameters>
 
     <services>
+        <service id="form.resolved_type_factory" class="%form.resolved_type_factory.class%">
+            <argument type="service" id="ivory_ordered_form.form_orderer_factory" />
+        </service>
+
+        <service
+            id="ivory_ordered_form.form_orderer_factory"
+            class="%ivory_ordered_form.form_orderer_factory.class%"
+            public="false"
+        />
+
         <service id="ivory_ordered_form.form_extension" class="%ivory_ordered_form.form_extension.class%">
             <tag name="form.type_extension" alias="form" />
         </service>

@@ -9,17 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\OrderedFormBundle\Form;
+namespace Ivory\OrderedFormBundle\Form\Builder;
 
-use Symfony\Component\Form\SubmitButtonBuilder;
-use Symfony\Component\Form\Exception\InvalidConfigurationException;
+use Ivory\OrderedFormBundle\Form\Exception\OrderedConfigurationException;
+use Ivory\OrderedFormBundle\Form\OrderedFormConfigInterface;
+use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\Exception\BadMethodCallException;
 
 /**
- * Ordered submit button builder.
+ * Ordered form builder.
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class OrderedSubmitButtonBuilder extends SubmitButtonBuilder
+class OrderedFormBuilder extends FormBuilder implements OrderedFormConfigBuilderInterface, OrderedFormConfigInterface
 {
     /** @var null|string|array */
     protected $position;
@@ -37,18 +39,20 @@ class OrderedSubmitButtonBuilder extends SubmitButtonBuilder
      */
     public function setPosition($position)
     {
+        if ($this->locked) {
+            throw new BadMethodCallException('The config builder cannot be modified anymore.');
+        }
+
         if (is_string($position) && ($position !== 'first') && ($position !== 'last')) {
-            throw new InvalidConfigurationException(
-                'If you use position as string, you can only use "first" & "last".'
-            );
+            throw OrderedConfigurationException::createInvalidStringPosition($this->getName(), $position);
         }
 
         if (is_array($position) && !isset($position['before']) && !isset($position['after'])) {
-            throw new InvalidConfigurationException(
-                'If you use position as array, you must at least define the "before" or "after" option.'
-            );
+            throw OrderedConfigurationException::createInvalidArrayPosition($this->getName(), $position);
         }
 
         $this->position = $position;
+
+        return $this;
     }
 }
