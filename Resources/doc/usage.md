@@ -66,7 +66,7 @@ The before position allows you to place the form just before an other form :)
 ``` php
 $builder
     ->add('b', 'text')
-    ->add('a', 'text', array('before' => 'b'))
+    ->add('a', 'text', array('position' => array('before' => 'b')))
     ->add('c', 'text');
 ```
 
@@ -76,9 +76,9 @@ If you can use multiple before:
 
 ``` php
 $builder
-    ->add('a', 'text', array('before' => 'b'))
+    ->add('a', 'text', array('position' => array('before' => 'b')))
     ->add('c', 'text')
-    ->add('b', 'text', array('before' => 'c'));
+    ->add('b', 'text', array('position' => array('before' => 'c')));
 ```
 
 The output will be: A => B => C.
@@ -89,7 +89,7 @@ The after position allows you to place the form just after an other form...
 
 ``` php
 $builder
-    ->add('b', 'text', array('after' => 'a'))
+    ->add('b', 'text', array('position' => array('after' => 'a')))
     ->add('a', 'text')
     ->add('c', 'text');
 ```
@@ -101,8 +101,8 @@ If you can use multiple after:
 ``` php
 $builder
     ->add('a', 'text')
-    ->add('c', 'text', array('after' => 'b'))
-    ->add('b', 'text', array('after' => 'a'));
+    ->add('c', 'text', array('position' => array('after' => 'b')))
+    ->add('b', 'text', array('position' => array('after' => 'a')));
 ```
 
 The output will be: A => B => C.
