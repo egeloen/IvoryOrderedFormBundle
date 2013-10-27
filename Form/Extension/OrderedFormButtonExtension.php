@@ -11,12 +11,13 @@
 
 namespace Ivory\OrderedFormBundle\Form\Extension;
 
+use Ivory\OrderedFormBundle\Form\OrderedFormFormExtension
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
-* Ordered form extension.
+* Ordered form button extension.
 *
 * @author tweini <tweini@gmail.com>
 */
