@@ -20,7 +20,7 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class OrderedFormExtension extends AbstractTypeExtension
+class OrderedFormFormExtension extends AbstractTypeExtension
 {
     /**
      * {@inheritdoc}
