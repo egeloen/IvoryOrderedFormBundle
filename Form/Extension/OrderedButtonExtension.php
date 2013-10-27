@@ -12,17 +12,18 @@
 namespace Ivory\OrderedFormBundle\Form\Extension;
 
 /**
- * Ordered form extension.
+ * Ordered form button extension.
  *
+ * @author tweini <tweini@gmail.com>
  * @author GeLo <geloen.eric@gmail.com>
  */
-class OrderedFormExtension extends AbstractOrderedExtension
+class OrderedButtonExtension extends AbstractOrderedExtension
 {
     /**
-     * {@inheritdoc}
-     */
+    * {@inheritdoc}
+    */
     public function getExtendedType()
     {
-        return 'form';
+        return 'button';
     }
 }

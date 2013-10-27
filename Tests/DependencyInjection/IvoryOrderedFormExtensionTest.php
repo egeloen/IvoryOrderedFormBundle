@@ -66,4 +66,19 @@ class IvoryOrderedFormExtensionTest extends \PHPUnit_Framework_TestCase
             $this->container->get('ivory_ordered_form.form_extension')
         );
     }
+
+    public function testButtonExtension()
+    {
+        $this->container->compile();
+
+        $this->assertArrayHasKey(
+            'ivory_ordered_form.button_extension',
+            $this->container->findTaggedServiceIds('form.type_extension')
+        );
+
+        $this->assertInstanceOf(
+            'Ivory\OrderedFormBundle\Form\Extension\OrderedButtonExtension',
+            $this->container->get('ivory_ordered_form.button_extension')
+        );
+    }
 }

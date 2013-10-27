@@ -11,6 +11,7 @@
 
 namespace Ivory\OrderedFormBundle\Tests\Form\Extension;
 
+use Ivory\OrderedFormBundle\Form\Extension\OrderedButtonExtension;
 use Ivory\OrderedFormBundle\Form\Extension\OrderedFormExtension;
 use Ivory\OrderedFormBundle\Form\Builder\OrderedFormBuilder;
 use Ivory\OrderedFormBundle\Form\OrderedResolvedFormTypeFactory;
@@ -38,6 +39,7 @@ class OrderedFormExtensionTest extends TypeTestCase
         $this->factory = Forms::createFormFactoryBuilder()
             ->setResolvedTypeFactory(new OrderedResolvedFormTypeFactory(new FormOrdererFactory()))
             ->addTypeExtension(new OrderedFormExtension())
+            ->addTypeExtension(new OrderedButtonExtension())
             ->getFormFactory();
 
         $this->dataMapper = $this->getMock('Symfony\Component\Form\DataMapperInterface');
@@ -58,23 +60,45 @@ class OrderedFormExtensionTest extends TypeTestCase
         unset($this->dataMapper);
     }
 
-    public function testEmptyPosition()
+    /**
+     * Form types data provider.
+     *
+     * @return array The form types.
+     */
+    public function formTypeProvider()
     {
-        $form = $this->builder->create('foo', 'text')->getForm();
+        return array(
+            array('text'),
+            array('button'),
+        );
+    }
+
+    /**
+     * @dataProvider formTypeProvider
+     */
+    public function testEmptyPosition($type)
+    {
+        $form = $this->builder->create('foo', $type)->getForm();
 
         $this->assertNull($form->getConfig()->getPosition());
     }
 
-    public function testStringPosition()
+    /**
+     * @dataProvider formTypeProvider
+     */
+    public function testStringPosition($type)
     {
-        $form = $this->builder->create('foo', 'text', array('position' => 'first'))->getForm();
+        $form = $this->builder->create('foo', $type, array('position' => 'first'))->getForm();
 
         $this->assertSame('first', $form->getConfig()->getPosition());
     }
 
-    public function testArrayPosition()
+    /**
+     * @dataProvider formTypeProvider
+     */
+    public function testArrayPosition($type)
     {
-        $form = $this->builder->create('foo', 'text', array('position' => array('before' => 'bar')))->getForm();
+        $form = $this->builder->create('foo', $type, array('position' => array('before' => 'bar')))->getForm();
 
         $this->assertSame(array('before' => 'bar'), $form->getConfig()->getPosition());
     }
