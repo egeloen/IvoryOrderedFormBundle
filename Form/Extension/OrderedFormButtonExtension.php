@@ -21,7 +21,7 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 *
 * @author tweini <tweini@gmail.com>
 */
-class OrderedFormButtonExtension extends OrderedFormExtension
+class OrderedFormButtonExtension extends OrderedFormFormExtension
 {
     /**
     * {@inheritdoc}
