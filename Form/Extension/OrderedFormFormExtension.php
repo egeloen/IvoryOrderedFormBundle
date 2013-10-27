@@ -16,11 +16,11 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
- * Ordered form extension.
+ * Ordered form form extension.
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class OrderedFormExtension extends AbstractTypeExtension
+class OrderedFormFormExtension extends AbstractTypeExtension
 {
     /**
      * {@inheritdoc}
