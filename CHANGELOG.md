@@ -1,6 +1,6 @@
 # CHANGELOG
 
-### 0.9.1 (????-??-??)
+### 0.9.1 (2013-10-29)
 
  * 8de6f4f - Add button support
  * ea10a61 - [Doc] Fix examples
