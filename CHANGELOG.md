@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 0.9.2 (????-??-??)
+
+ * e426180 - [OrderedResolvedFormType] Fix builder creation
+
 ### 0.9.1 (2013-10-29)
 
  * 8de6f4f - Add button support
