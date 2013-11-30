@@ -52,6 +52,22 @@ class OrderedResolvedFormType extends ResolvedFormType
     /**
      * {@inheritdoc}
      */
+    public function createBuilder(FormFactoryInterface $factory, $name, array $options = array())
+    {
+        $options = $this->getOptionsResolver()->resolve($options);
+        $dataClass = isset($options['data_class']) ? $options['data_class'] : null;
+
+        $builder = $this->newBuilder($name, $dataClass, $factory, $options);
+        $builder->setType($this);
+
+        $this->buildForm($builder, $options);
+
+        return $builder;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function createView(FormInterface $form, FormView $parent = null)
     {
         $options = $form->getConfig()->getOptions();
