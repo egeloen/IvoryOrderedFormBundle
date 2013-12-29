@@ -14,7 +14,7 @@ Require the bundle in your composer.json file:
 ``` json
 {
     "require": {
-        "egeloen/ordered-form-bundle": "dev-master",
+        "egeloen/ordered-form-bundle": "~1.0",
     }
 }
 ```

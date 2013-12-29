@@ -1,6 +1,6 @@
 # CHANGELOG
 
-### 1.0.0 (????-??-??)
+### 1.0.0 (2013-12-29)
 
  * 875ec66 Extract business code in a dedicated library + Update Symfony to >= 2.3
 
