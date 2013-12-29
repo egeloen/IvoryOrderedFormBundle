@@ -47,7 +47,7 @@ class IvoryOrderedFormExtensionTest extends \PHPUnit_Framework_TestCase
         $this->container->compile();
 
         $this->assertInstanceOf(
-            'Ivory\OrderedFormBundle\Form\OrderedResolvedFormTypeFactory',
+            'Ivory\OrderedForm\OrderedResolvedFormTypeFactory',
             $this->container->get('form.resolved_type_factory')
         );
     }
@@ -62,7 +62,7 @@ class IvoryOrderedFormExtensionTest extends \PHPUnit_Framework_TestCase
         );
 
         $this->assertInstanceOf(
-            'Ivory\OrderedFormBundle\Form\Extension\OrderedFormExtension',
+            'Ivory\OrderedForm\Extension\OrderedFormExtension',
             $this->container->get('ivory_ordered_form.form_extension')
         );
     }
@@ -77,7 +77,7 @@ class IvoryOrderedFormExtensionTest extends \PHPUnit_Framework_TestCase
         );
 
         $this->assertInstanceOf(
-            'Ivory\OrderedFormBundle\Form\Extension\OrderedButtonExtension',
+            'Ivory\OrderedForm\Extension\OrderedButtonExtension',
             $this->container->get('ivory_ordered_form.button_extension')
         );
     }

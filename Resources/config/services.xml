@@ -6,10 +6,10 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
 >
     <parameters>
-        <parameter key="form.resolved_type_factory.class">Ivory\OrderedFormBundle\Form\OrderedResolvedFormTypeFactory</parameter>
-        <parameter key="ivory_ordered_form.form_extension.class">Ivory\OrderedFormBundle\Form\Extension\OrderedFormExtension</parameter>
-        <parameter key="ivory_ordered_form.button_extension.class">Ivory\OrderedFormBundle\Form\Extension\OrderedButtonExtension</parameter>
-        <parameter key="ivory_ordered_form.form_orderer_factory.class">Ivory\OrderedFormBundle\Form\Orderer\FormOrdererFactory</parameter>
+        <parameter key="form.resolved_type_factory.class">Ivory\OrderedForm\OrderedResolvedFormTypeFactory</parameter>
+        <parameter key="ivory_ordered_form.form_extension.class">Ivory\OrderedForm\Extension\OrderedFormExtension</parameter>
+        <parameter key="ivory_ordered_form.button_extension.class">Ivory\OrderedForm\Extension\OrderedButtonExtension</parameter>
+        <parameter key="ivory_ordered_form.form_orderer_factory.class">Ivory\OrderedForm\Orderer\FormOrdererFactory</parameter>
     </parameters>
 
     <services>

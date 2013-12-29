@@ -7,15 +7,47 @@ last or an associative array describing before and/or after field.
 
 ## Documentation
 
- 1. [Installation](http://github.com/egeloen/IvoryOrderedFormBundle/blob/master/Resources/doc/installation.md)
- 2. [Usage](http://github.com/egeloen/IvoryOrderedFormBundle/blob/master/Resources/doc/usage.md)
+### Installation
 
-## Known limitations
+Require the bundle in your composer.json file:
 
- * The orderer does not support symetric before/after options.
- * The orderer does not support before & after option simultaneously to move other field(s).
+``` json
+{
+    "require": {
+        "egeloen/ordered-form-bundle": "dev-master",
+    }
+}
+```
 
-There are probably other limitations, if you find one, report it!
+Register the bundle:
+
+``` php
+// app/AppKernel.php
+
+public function registerBundles()
+{
+    return array(
+        new Ivory\OrderedFormBundle\IvoryOrderedFormBundle(),
+        // ...
+    );
+}
+```
+
+Install the bundle:
+
+``` bash
+$ composer update
+```
+
+### Usage
+
+As explain above, the bundle adds a new option called `position` on all forms! You can get the full documentation
+[here](https://github.com/egeloen/ivory-ordered-form/blob/master/doc/usage.md#position).
+
+### Known limitations
+
+Some use cases can not be handled by the bundle. They are listed
+[here](https://github.com/egeloen/ivory-ordered-form/blob/master/doc/known_limitations.md).
 
 ## Contribute
 
