@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 1.0.0 (????-??-??)
+
+ * 875ec66 Extract business code in a dedicated library + Update Symfony to >= 2.3
+
 ### 0.9.2 (2013-12-12)
 
  * 7b24143 - [Travis] Simplify matrix + Add Symfony 2.4 to the build
