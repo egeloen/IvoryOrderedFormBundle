@@ -2,6 +2,7 @@
 
 ### 1.0.1 (????-??-??)
 
+ * ff965c0 - Add coveralls support
  * 44f0cc1 - Update new years
 
 ### 1.0.0 (2013-12-29)
