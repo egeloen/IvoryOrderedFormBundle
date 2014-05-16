@@ -1,6 +1,6 @@
 # CHANGELOG
 
-### 1.0.1 (????-??-??)
+### 1.0.1 (2014-05-16)
 
  * ff965c0 - Add coveralls support
  * 44f0cc1 - Update new years
