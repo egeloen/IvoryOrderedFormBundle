@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### 1.0.2 (????-??-??)
+
+ * 64f158d - [README] Add scrutinizer CI badge
+ * b3f88a3 - [Test] Reduce code duplication
+
 ### 1.0.1 (2014-05-16)
 
  * ff965c0 - Add coveralls support
