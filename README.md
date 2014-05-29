@@ -2,6 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/egeloen/IvoryOrderedFormBundle.png)](http://travis-ci.org/egeloen/IvoryOrderedFormBundle)
 [![Coverage Status](https://coveralls.io/repos/egeloen/IvoryOrderedFormBundle/badge.png?branch=master)](https://coveralls.io/r/egeloen/IvoryOrderedFormBundle?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/egeloen/IvoryOrderedFormBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/egeloen/IvoryOrderedFormBundle/?branch=master)
 
 The bundle allows to order your Symfony2 form fields by adding the position option. A position can either be first,
 last or an associative array describing before and/or after field.
