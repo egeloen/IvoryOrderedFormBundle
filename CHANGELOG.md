@@ -2,6 +2,7 @@
 
 ### 1.0.2 (????-??-??)
 
+ * b4b06d8 - [Travis] Add Symfony 2.5
  * 64f158d - [README] Add scrutinizer CI badge
  * b3f88a3 - [Test] Reduce code duplication
 
