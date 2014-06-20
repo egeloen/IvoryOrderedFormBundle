@@ -20,12 +20,11 @@
         "satooshi/php-coveralls": "~0.6"
     },
     "autoload": {
-        "psr-0": { "Ivory\\OrderedFormBundle": "" }
+        "psr-4": { "Ivory\\OrderedFormBundle\\": "" }
     },
     "config": {
         "bin-dir": "bin/"
     },
-    "target-dir": "Ivory/OrderedFormBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
