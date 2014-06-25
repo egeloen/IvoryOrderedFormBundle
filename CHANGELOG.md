@@ -2,6 +2,9 @@
 
 ### 1.0.3 (????-??-??)
 
+ * ffefad7 - [README] Add packagist badges
+ * 1565454 - [Travis] Increase build matrix
+ * 09f069a - [Composer] Bump PHP to 5.3.3 + PHPUnit to 4.0
  * ea1a610 - [Travis][Composer] Remove --dev
  * 9d4c945 - [Composer] Upgrade to PSR-4
 
