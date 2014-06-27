@@ -1,7 +1,8 @@
 # CHANGELOG
 
-### 1.0.3 (????-??-??)
+### 1.1.0 (????-??-??)
 
+ * eb05ef7 - [Resources] Refactor services according to the library changes
  * 22f2738 - [README] Add versioneye badge
  * ffefad7 - [README] Add packagist badges
  * 1565454 - [Travis] Increase build matrix
