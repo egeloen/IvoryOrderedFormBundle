@@ -1,6 +1,6 @@
 # CHANGELOG
 
-### 1.1.0 (????-??-??)
+### 1.1.0 (2014-08-12)
 
  * 5c13cb6 - [Travis] Improve build matrix
  * a83bbd1 - [Composer] Bump egeloen/ordered-form
