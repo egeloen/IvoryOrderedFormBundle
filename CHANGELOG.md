@@ -2,6 +2,8 @@
 
 ### 1.1.0 (????-??-??)
 
+ * 5c13cb6 - [Travis] Improve build matrix
+ * a83bbd1 - [Composer] Bump egeloen/ordered-form
  * eb05ef7 - [Resources] Refactor services according to the library changes
  * 22f2738 - [README] Add versioneye badge
  * ffefad7 - [README] Add packagist badges
