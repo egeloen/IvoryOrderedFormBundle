@@ -13,7 +13,7 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/framework-bundle": "~2.3",
-        "egeloen/ordered-form": "~1.1@dev"
+        "egeloen/ordered-form": "~1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0",
