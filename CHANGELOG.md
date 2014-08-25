@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 1.1.1 (????-??-??)
+
+ * 2a917d8 - [Composer] Refine deps
+
 ### 1.1.0 (2014-08-12)
 
  * 5c13cb6 - [Travis] Improve build matrix
