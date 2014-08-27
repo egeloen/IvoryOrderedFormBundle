@@ -57,6 +57,11 @@ As explain above, the bundle adds a new option called `position` on all forms! Y
 Some use cases can not be handled by the bundle. They are listed
 [here](https://github.com/egeloen/ivory-ordered-form/blob/master/doc/known_limitations.md).
 
+## Testing
+
+The bundle is fully unit tested by [PHPUnit](http://www.phpunit.de/) with a code coverage close to **100%**. To
+execute the test suite, check the travis [configuration](/.travis.yml).
+
 ## Contribute
 
 We love contributors! Ivory is an open source project. If you'd like to contribute, feel free to propose a PR!
@@ -64,5 +69,4 @@ We love contributors! Ivory is an open source project. If you'd like to contribu
 ## License
 
 The Ivory Ordered Form Bundle is under the MIT license. For the full copyright and license information, please read the
-[LICENSE](https://github.com/egeloen/IvoryOrderedFormBundle/blob/master/LICENSE) file that was distributed with this
-source code.
+[LICENSE](/LICENSE) file that was distributed with this source code.
