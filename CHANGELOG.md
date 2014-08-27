@@ -2,6 +2,8 @@
 
 ### 1.1.1 (????-??-??)
 
+ * bd87e4f - [README] Rely on relative link
+ * 6c402a3 - Add contributing doc
  * 2a917d8 - [Composer] Refine deps
 
 ### 1.1.0 (2014-08-12)
