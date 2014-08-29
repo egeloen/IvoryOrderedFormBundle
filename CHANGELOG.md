@@ -2,6 +2,7 @@
 
 ### 1.1.1 (????-??-??)
 
+ * 7d0d16a - [Gitignore] Remove Composer installer and phar
  * bd87e4f - [README] Rely on relative link
  * 6c402a3 - Add contributing doc
  * 2a917d8 - [Composer] Refine deps
