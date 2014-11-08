@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 2.0.0 (????-??-??)
+
+ * bec1d71 - [Encapsulation] Move everything from protected to private (except for entry point)
+
 ### 1.1.1 (2014-11-08)
 
  * 7d0d16a - [Gitignore] Remove Composer installer and phar
