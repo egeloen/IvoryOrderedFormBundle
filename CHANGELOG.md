@@ -1,6 +1,6 @@
 # CHANGELOG
 
-### 1.1.1 (????-??-??)
+### 1.1.1 (2014-11-08)
 
  * 7d0d16a - [Gitignore] Remove Composer installer and phar
  * bd87e4f - [README] Rely on relative link
