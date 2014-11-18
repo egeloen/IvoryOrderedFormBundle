@@ -2,6 +2,7 @@
 
 ### 2.0.0 (????-??-??)
 
+ * 6fae432 - [DependencyInjection] Remove *.class parameters
  * eac9a60 - [Test] Remove bootstrap.php
  * bec1d71 - [Encapsulation] Move everything from protected to private (except for entry point)
 
