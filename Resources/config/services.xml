@@ -5,29 +5,22 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
 >
-    <parameters>
-        <parameter key="form.resolved_type_factory.class">Ivory\OrderedForm\OrderedResolvedFormTypeFactory</parameter>
-        <parameter key="ivory_ordered_form.form_extension.class">Ivory\OrderedForm\Extension\OrderedFormExtension</parameter>
-        <parameter key="ivory_ordered_form.button_extension.class">Ivory\OrderedForm\Extension\OrderedButtonExtension</parameter>
-        <parameter key="ivory_ordered_form.form_orderer.class">Ivory\OrderedForm\Orderer\FormOrderer</parameter>
-    </parameters>
-
     <services>
-        <service id="form.resolved_type_factory" class="%form.resolved_type_factory.class%">
+        <service id="form.resolved_type_factory" class="Ivory\OrderedForm\OrderedResolvedFormTypeFactory">
             <argument type="service" id="ivory_ordered_form.form_orderer" />
         </service>
 
         <service
             id="ivory_ordered_form.form_orderer"
-            class="%ivory_ordered_form.form_orderer.class%"
+            class="Ivory\OrderedForm\Orderer\FormOrderer"
             public="false"
         />
 
-        <service id="ivory_ordered_form.form_extension" class="%ivory_ordered_form.form_extension.class%">
+        <service id="ivory_ordered_form.form_extension" class="Ivory\OrderedForm\Extension\OrderedFormExtension">
             <tag name="form.type_extension" alias="form" />
         </service>
 
-        <service id="ivory_ordered_form.button_extension" class="%ivory_ordered_form.button_extension.class%">
+        <service id="ivory_ordered_form.button_extension" class="Ivory\OrderedForm\Extension\OrderedButtonExtension">
             <tag name="form.type_extension" alias="button" />
         </service>
     </services>
