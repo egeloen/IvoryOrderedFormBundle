@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 2.0.1 (????-??-??)
+
+ * 7acf274 - Make code base compatible with Symfony3
+ 
 ### 2.0.0 (2014-12-29)
 
  * cb452c0 - [Travis] Add composer prefer lowest build
