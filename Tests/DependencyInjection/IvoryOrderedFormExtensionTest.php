@@ -13,6 +13,7 @@ namespace Ivory\OrderedFormBundle\Tests\DependencyInjection;
 
 use Ivory\OrderedFormBundle\DependencyInjection\IvoryOrderedFormExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\HttpKernel\Kernel;
 
 /**
  * Ivory ordered form extension test.
@@ -56,19 +57,41 @@ class IvoryOrderedFormExtensionTest extends \PHPUnit_Framework_TestCase
     {
         $this->container->compile();
 
-        $services = $this->container->findTaggedServiceIds('form.type_extension');
+        $services = $this->container->findTaggedServiceIds($tag = 'form.type_extension');
 
-        $this->assertArrayHasKey('ivory_ordered_form.form_extension', $services);
-        $this->assertArrayHasKey('ivory_ordered_form.button_extension', $services);
+        $this->assertCount(2, $services);
+        $this->assertArrayHasKey($formExtension = 'ivory_ordered_form.form_extension', $services);
+        $this->assertArrayHasKey($buttonExtension = 'ivory_ordered_form.button_extension', $services);
+
+        if (Kernel::VERSION_ID < 20800) {
+            $this->assertSame(array(array('alias' => 'form')), $services[$formExtension]);
+            $this->assertSame(array(array('alias' => 'button')), $services[$buttonExtension]);
+        } else {
+            $this->assertSame(
+                array(array(
+                    'extended_type' => 'Symfony\Component\Form\Extension\Core\Type\FormType',
+                    'extended-type' => 'Symfony\Component\Form\Extension\Core\Type\FormType'
+                )),
+                $services[$formExtension]
+            );
+
+            $this->assertSame(
+                array(array(
+                    'extended_type' => 'Symfony\Component\Form\Extension\Core\Type\ButtonType',
+                    'extended-type' => 'Symfony\Component\Form\Extension\Core\Type\ButtonType'
+                )),
+                $services[$buttonExtension]
+            );
+        }
 
         $this->assertInstanceOf(
             'Ivory\OrderedForm\Extension\OrderedFormExtension',
-            $this->container->get('ivory_ordered_form.form_extension')
+            $this->container->get($formExtension)
         );
 
         $this->assertInstanceOf(
             'Ivory\OrderedForm\Extension\OrderedButtonExtension',
-            $this->container->get('ivory_ordered_form.button_extension')
+            $this->container->get($buttonExtension)
         );
     }
 }
