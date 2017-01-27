@@ -18,8 +18,6 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\HttpKernel\Kernel;
 
 /**
- * Ivory Ordered Form extension.
- *
  * @author GeLo <geloen.eric@gmail.com>
  */
 class IvoryOrderedFormExtension extends Extension

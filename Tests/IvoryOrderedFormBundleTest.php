@@ -14,13 +14,13 @@ namespace Ivory\OrderedFormBundle\Tests;
 use Ivory\OrderedFormBundle\IvoryOrderedFormBundle;
 
 /**
- * Ivory ordered form bundle test.
- *
  * @author GeLo <geloen.eric@gmail.com>
  */
 class IvoryOrderedFormBundleTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\OrderedFormBundle\IvoryOrderedFormBundle */
+    /**
+     * @var IvoryOrderedFormBundle
+     */
     protected $bundle;
 
     /**
@@ -29,14 +29,6 @@ class IvoryOrderedFormBundleTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->bundle = new IvoryOrderedFormBundle();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function tearDown()
-    {
-        unset($this->bundle);
     }
 
     public function testInheritance()

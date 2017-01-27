@@ -16,13 +16,13 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 
 /**
- * Ivory ordered form extension test.
- *
  * @author GeLo <geloen.eric@gmail.com>
  */
 class IvoryOrderedFormExtensionTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Symfony\Component\DependencyInjection\ContainerBuilder */
+    /**
+     * @var ContainerBuilder
+     */
     private $container;
 
     /**
@@ -33,14 +33,6 @@ class IvoryOrderedFormExtensionTest extends \PHPUnit_Framework_TestCase
         $this->container = new ContainerBuilder();
         $this->container->registerExtension($extension = new IvoryOrderedFormExtension());
         $this->container->loadFromExtension($extension->getAlias());
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function tearDown()
-    {
-        unset($this->container);
     }
 
     public function testResolvedFormTypeFactory()
@@ -70,7 +62,7 @@ class IvoryOrderedFormExtensionTest extends \PHPUnit_Framework_TestCase
             $this->assertSame(
                 array(array(
                     'extended_type' => 'Symfony\Component\Form\Extension\Core\Type\FormType',
-                    'extended-type' => 'Symfony\Component\Form\Extension\Core\Type\FormType'
+                    'extended-type' => 'Symfony\Component\Form\Extension\Core\Type\FormType',
                 )),
                 $services[$formExtension]
             );
@@ -78,7 +70,7 @@ class IvoryOrderedFormExtensionTest extends \PHPUnit_Framework_TestCase
             $this->assertSame(
                 array(array(
                     'extended_type' => 'Symfony\Component\Form\Extension\Core\Type\ButtonType',
-                    'extended-type' => 'Symfony\Component\Form\Extension\Core\Type\ButtonType'
+                    'extended-type' => 'Symfony\Component\Form\Extension\Core\Type\ButtonType',
                 )),
                 $services[$buttonExtension]
             );
