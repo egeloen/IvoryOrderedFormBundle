@@ -2,6 +2,7 @@
 
 ### 2.0.2 (????-??-??)
 
+ * 3ba963a - Add PHP-CS-Fixer support
  * 7ec52ca - [Composer] Update deps
  * 2a75fc3 - [License] Happy new year
  * 9829a3d - Remove coveralls
