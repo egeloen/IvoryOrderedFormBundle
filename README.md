@@ -15,47 +15,8 @@ last or an associative array describing before and/or after field.
 
 ## Documentation
 
-### Installation
-
-Require the bundle in your composer.json file:
-
-``` json
-{
-    "require": {
-        "egeloen/ordered-form-bundle": "~1.0",
-    }
-}
-```
-
-Register the bundle:
-
-``` php
-// app/AppKernel.php
-
-public function registerBundles()
-{
-    return array(
-        new Ivory\OrderedFormBundle\IvoryOrderedFormBundle(),
-        // ...
-    );
-}
-```
-
-Install the bundle:
-
-``` bash
-$ composer update
-```
-
-### Usage
-
-As explain above, the bundle adds a new option called `position` on all forms! You can get the full documentation
-[here](https://github.com/egeloen/ivory-ordered-form/blob/master/doc/usage.md#position).
-
-### Known limitations
-
-Some use cases can not be handled by the bundle. They are listed
-[here](https://github.com/egeloen/ivory-ordered-form/blob/master/doc/known_limitations.md).
+ 1. [Installation](/Resources/doc/installation.md)
+ 2. [Usage](/Resources/doc/usage.md)
 
 ## Testing
 
@@ -64,7 +25,8 @@ execute the test suite, check the travis [configuration](/.travis.yml).
 
 ## Contribute
 
-We love contributors! Ivory is an open source project. If you'd like to contribute, feel free to propose a PR!
+We love contributors! Ivory is an open source project. If you'd like to contribute, feel free to propose a PR! You
+can follow the [CONTRIBUTING](/CONTRIBUTING.md) file which will explain you how to set up the project.
 
 ## License
 
