@@ -2,6 +2,8 @@
 
 ### 2.0.2 (????-??-??)
 
+ * 2f46707 - [Docker] Add HHVM container
+ * a816ac9 - Add docker support
  * 3ba963a - Add PHP-CS-Fixer support
  * 7ec52ca - [Composer] Update deps
  * 2a75fc3 - [License] Happy new year
