@@ -1,6 +1,7 @@
 # README
 
-[![Build Status](https://secure.travis-ci.org/egeloen/IvoryOrderedFormBundle.png?branch=master)](http://travis-ci.org/egeloen/IvoryOrderedFormBundle)
+[![Travis Build Status](https://secure.travis-ci.org/egeloen/IvoryOrderedFormBundle.png?branch=master)](http://travis-ci.org/egeloen/IvoryOrderedFormBundle)
+[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/4b1d64pa9fdm20mi/branch/master?svg=true)](https://ci.appveyor.com/project/egeloen/ivoryorderedformbundle/branch/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/egeloen/IvoryOrderedFormBundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/egeloen/IvoryOrderedFormBundle/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/egeloen/IvoryOrderedFormBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/egeloen/IvoryOrderedFormBundle/?branch=master)
 [![Dependency Status](https://www.versioneye.com/php/egeloen:ordered-form-bundle/badge.svg)](https://www.versioneye.com/php/egeloen:ordered-form-bundle)
