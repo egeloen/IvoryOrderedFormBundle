@@ -14,8 +14,8 @@ namespace Ivory\OrderedFormBundle\DependencyInjection;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
+use Symfony\Component\Form\AbstractType;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\Component\HttpKernel\Kernel;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>
@@ -30,14 +30,14 @@ class IvoryOrderedFormExtension extends Extension
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        if (Kernel::VERSION_ID < 20800) {
+        if (!method_exists(AbstractType::class, 'getBlockPrefix')) {
             $container->getDefinition('ivory_ordered_form.form_extension')
                 ->clearTag($tag = 'form.type_extension')
-                ->addTag($tag, array('alias' => 'form'));
+                ->addTag($tag, ['alias' => 'form']);
 
             $container->getDefinition('ivory_ordered_form.button_extension')
                 ->clearTag($tag)
-                ->addTag($tag, array('alias' => 'button'));
+                ->addTag($tag, ['alias' => 'button']);
         }
     }
 }

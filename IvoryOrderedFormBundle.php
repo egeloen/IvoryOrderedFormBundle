@@ -14,8 +14,6 @@ namespace Ivory\OrderedFormBundle;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Ivory Ordered Form bundle.
- *
  * @author GeLo <geloen.eric@gmail.com>
  */
 class IvoryOrderedFormBundle extends Bundle
