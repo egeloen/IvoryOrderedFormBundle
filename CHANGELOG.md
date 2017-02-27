@@ -1,6 +1,6 @@
 # CHANGELOG
 
-### 3.0.0 (????-??-??)
+### 3.0.0 (2017-02-27)
 
  * 3d820ca - [UPGRADE] Notify about PHP and Symfony bump
  * 1c0ea3e - [Composer] Move egeloen/ordered-form to stable
